@@ -1,0 +1,48 @@
+.own_text form{
+	display:flex;
+    flex-direction: column !important;
+}
+
+
+.own_text h1{
+background-color: black;
+    color: white;
+    font-size: 1.8rem;
+    font-family: monospace;
+    padding: 12px 10px;
+}
+
+
+.own_text form{
+
+}
+
+.own_text form input{
+border: none;
+    outline: none;
+    border-bottom: 1px solid;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    letter-spacing: 0.2px;
+}
+
+.post_form input{
+border: none;
+    outline: none;
+    border-bottom: 1px solid;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    letter-spacing: 0.2px;
+
+}
+
+.own_text form textarea{
+    font-size: 1.2rem;
+    margin: 0px !important;
+    height:30vh;
+}
+
+
+
+
+

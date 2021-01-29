@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/css/signin.css">
+	<style type="text/css">
+
+		.alert{
+			    border: 2px solid #e4192b;
+    margin: 0px 3vw;
+    background-color: #f8d7da;
+    padding: 12px 4px;
+    margin-top: 13px;
+    margin-bottom: 12px;
+		}	
+		strong{
+			    color: #634f4f;
+    font-weight: bolder;
+    margin: 14px 8px;
+    font-size: 1.4rem;
+    font-family: monospace;
+		}
+
+	</style>
+	<title>sign in page</title>
+</head>
+<body>
+<%-include('navbar.ejs')%>
+
+	<div class="box" style="background-image: linear-gradient(45deg,violet,indigo,blue,green,yellow,orange,red);  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100% !important;
+    height: 100vh !important;">
+		
+		<form method="post">
+		<% if( error != '') { %>
+                <div class="alert alert-dismissible alert-danger">
+                    
+                    <strong><%= error %></strong>
+                </div>
+                <% } %>	
+		<div class="box" style="background-color: white;">
+			<h3>
+				Email
+			</h3>
+				<input type="email" name="email" minlength="5" maxlength="30">
+			
+			<h3>
+				password
+			</h3>
+				<input type="password" name="password" minlength="5">
+		
+			<button>login in</button>	
+		</div>
+	</form>
+	</div>
+</body>
+</html>

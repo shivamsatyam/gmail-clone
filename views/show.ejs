@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>show document</title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/contents.css">
+	<style>
+		.media img{
+			    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+		}
+		.media{
+			align-items:center !important;
+		}
+	</style>
+</head>
+<body>
+
+<div class="container">
+
+	 <%if(data!=undefined){%>
+   
+
+ <div class="upper">  
+  	<div class="media">
+    <img src="/upload/<%=data.to_image%>" class="mr-3">
+    <div class="media-body">
+      <h5 class="mt-0">
+        <%=data.subject%>
+      </h5>
+    </div>
+  </div>
+<pre>
+  <%=data.message%>
+</pre>
+</div>
+  <%}%>
+
+</div>
+
+
+
+<script type="text/javascript" src="/js/jquery1.js"></script>
+<script type="text/javascript" src="/js/jquery2.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>	
+
+<script type="text/javascript">
+	let pre = document.querySelector('pre')
+	let inner_text= pre.innerText
+
+	pre.innerHTML = inner_text
+</script>
+</body>
+</html>

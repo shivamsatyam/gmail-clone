@@ -1,0 +1,75 @@
+.upper_bar{
+    display: flex !important;
+    justify-content: space-between !important;
+    background-color:#f8f9fa!important;
+}
+
+.hamburger{
+    width: 3vw !important;
+    height: 7vh !important;
+    border: none !important;
+    display:inline;
+    background: transparent !important;
+}
+
+
+.hamburger-child{
+        margin-top: 7px !important;
+    border: 1px solid black !important;
+    width: 2vw;
+    margin-left: 12px;
+}
+
+
+.upper_bar_image{
+display: flex !important;
+    flex-direction: row-reverse !important;
+        align-items: center;
+}
+
+
+
+.upper_bar_image h3{
+	
+}
+
+
+
+.upper_bar_image img{
+	    width: 3vw !important;
+    border-radius: 50% !important;
+    margin: 1px 18px !important;
+}
+
+
+.compose_mail{
+    border: none;
+    background: transparent;
+    display: flex;
+    position: fixed;
+    top: 89%;
+    right: 2%;
+    box-shadow: 0.6px 0.5px 4px -2px black;
+    border-radius: 60px;
+    outline: none;
+}
+
+
+.compose_mail img{
+border-radius: 60px;
+}
+
+
+.compose_mail h4{
+    
+}
+
+
+
+
+
+
+
+
+
+

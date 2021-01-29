@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/contents.css">
+		<link rel="stylesheet" type="text/css" href="/css/addcontent.css">
+	<title>ckedtor</title>
+	<style>
+		form button{
+			    border: none;
+    background-color: #007bff;
+    color: white;
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 1.42rem;
+    margin-top: 12px;
+    outline:none;
+		}
+	</style>
+</head>
+<body>
+
+
+<% if( error != '') { %>
+    	<div class="alert alert-danger" role="alert">
+		<strong>Oh snap!</strong><%=error%>
+		<button type="button" class="close" data-dismiss="alert"
+		aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+ <% } %>
+
+	<div class="navbar navbar-expand-lg navbar-dark bg-light" style="display:flex;justify-content:center;">
+		 <button type="button"id="plain-ck" class="btn btn-outline-primary">Plain text</button>
+    <button type="button" id="editor-ck" class="btn btn-outline-warning">Full editor</button>
+	</div>
+
+		<form method="post" action="full_post" class="post_form">
+			<input type="email" style="width:100%" placeholder="to" name="email">
+			<input type="text" style="width:100%" placeholder="Subject" name="subject">
+			<textarea name="content" id="content" style="height:78vh;"></textarea>
+			<button type="submit">Add post</button>
+		</form>
+	
+
+		<div class="own_text" style="display:none;">
+			<h1>New message</h1>
+			<form action="/text_post" method="post">
+				<input type="text" name="email" placeholder="To" >
+				<input type="text" name="subject" placeholder="Subject" >
+				<textarea name="text" placeholder="Enter your message...">
+					
+				</textarea>
+				<button class="btn btn-primary">Send</button>
+			</form>
+		</div>
+
+	<script src="/js/ckeditor/ckeditor.js"></script>
+	<script>
+	// CKEDITOR.instances.content.getData()
+		CKEDITOR.replace('content')
+
+		let plain = document.getElementById('plain-ck')
+		let editor = document.getElementById('editor-ck')
+
+		let post_form = document.querySelector('.post_form')
+		let plain_form = document.querySelector('.own_text')
+
+		plain.addEventListener('click',(event) => {
+		     plain_form.style.display='block'
+		     post_form.style.display='none'
+		});
+
+		editor.addEventListener('click',(event) => {
+		     plain_form.style.display='none'
+		     post_form.style.display='block'
+		});
+
+	</script>
+
+	<script type="text/javascript" src="/js/jquery1.js"></script>
+<script type="text/javascript" src="/js/jquery2.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>
