@@ -41,9 +41,9 @@
 	</div>
 
 		<form method="post" action="full_post" class="post_form">
-			<input type="email" style="width:100%" placeholder="to" name="email">
-			<input type="text" style="width:100%" placeholder="Subject" name="subject">
-			<textarea name="content" id="content" style="height:78vh;"></textarea>
+			<input type="email" style="width:100%" placeholder="to" name="email" required>
+			<input type="text" style="width:100%" placeholder="Subject" name="subject" required >
+			<textarea name="content" id="content" style="height:78vh;" required></textarea>
 			<button type="submit">Add post</button>
 		</form>
 	
@@ -51,9 +51,9 @@
 		<div class="own_text" style="display:none;">
 			<h1>New message</h1>
 			<form action="/text_post" method="post">
-				<input type="text" name="email" placeholder="To" >
-				<input type="text" name="subject" placeholder="Subject" >
-				<textarea name="text" placeholder="Enter your message...">
+				<input type="text" name="email" placeholder="To" required>
+				<input type="text" name="subject"  required placeholder="Subject" >
+				<textarea name="text" required placeholder="Enter your message...">
 					
 				</textarea>
 				<button class="btn btn-primary">Send</button>
